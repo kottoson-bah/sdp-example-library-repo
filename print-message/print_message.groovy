@@ -7,7 +7,7 @@ def call() {
   stage "Print Message", {
   
     def message = config.message ?:
-                  {error "message not defined in library config"}()
+                  "Message is not defined by the pipeline config."
     
     echo "${message}"
     
